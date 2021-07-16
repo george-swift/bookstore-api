@@ -5,16 +5,14 @@ require 'rails_helper'
 RSpec.describe Book, type: :model do
   subject(:book) { Book.new(title: 'Test book', author: 'Pragmatic dev', category: 'Learning') }
 
-  describe 'general model validations' do
+  describe 'presence validations' do
+    it { should validate_presence_of(:title) }
+    it { should validate_presence_of(:category) }
+  end
+
+  describe 'server side form validations' do
     it 'is valid with correct attributes' do
       expect(book).to be_valid
-    end
-
-    it 'is not valid without a title' do
-      book.category = ''
-      expect(book).to_not be_valid
-      book.title = nil
-      expect(book).to_not be_valid
     end
 
     it 'is not valid if title is less than 2 characters' do
@@ -29,13 +27,6 @@ RSpec.describe Book, type: :model do
       expect(book).to_not be_valid
       book.title = 'test' * 15
       expect(book).to be_valid
-    end
-
-    it 'is not valid without a category' do
-      book.category = nil
-      expect(book).to_not be_valid
-      book.category = ''
-      expect(book).to_not be_valid
     end
   end
 end
