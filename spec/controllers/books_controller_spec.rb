@@ -8,7 +8,7 @@ RSpec.describe BooksController, type: :controller do
   end
 
   let(:invalid_book_params) do
-    {title: nil, category: '' }
+    { title: nil, category: '' }
   end
 
   describe 'GET #index' do
