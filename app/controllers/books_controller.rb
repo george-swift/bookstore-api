@@ -19,6 +19,20 @@ class BooksController < ApplicationController
     end
   end
 
+  def update
+    @book = Book.find(params[:id])
+
+    if @book.update(book_params)
+      render json: {
+        data: @book
+      }
+    else
+      render json: {
+        data: @book.errors
+      }, status: :expectation_failed
+    end
+  end
+
   def destroy
     @book = Book.find(params[:id])
     @book.destroy
@@ -31,6 +45,6 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:title, :category)
+    params.require(:book).permit(:title, :category, :author, :chapter, :percentage, book: {})
   end
 end
