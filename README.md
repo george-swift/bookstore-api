@@ -1,24 +1,38 @@
-# README
+## BookStore CMS API Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Objectives:
+- Integrating an API only Rails application with a React Redux front end
+- Providing cross origin resource sharing
+- Server side validations
+- Managing databases
 
-Things you may want to cover:
+## Features
 
-* Ruby version
+> This serves as the API backend to the [BookStore content management system](https://redux-app-bookstore.herokuapp.com/) and supports the basic RESTFUL CRUD operations.
 
-* System dependencies
+## Built With
+- Ruby 3.0.1
+- Rails 6.1.4
+- Rails Middleware
+- Postgresql
+- Node.js
+- Yarn
+- RSpec
 
-* Configuration
+## Authors
 
-* Database creation
+👤 &nbsp; **Ubong George**
+- GitHub: [@george-swift](https://github.com/george-swift)
+- Twitter: [@\_\_pragmaticdev](https://twitter.com/__pragmaticdev)
 
-* Database initialization
+## Acknowledgments
 
-* How to run the test suite
+[Ruby on Rails Guide](https://guides.rubyonrails.org/api_app.html)
 
-* Services (job queues, cache servers, search engines, etc.)
+## Show your support
 
-* Deployment instructions
+Give a :star: &nbsp; if you like this project!
 
-* ...
+## License
+
+Available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
